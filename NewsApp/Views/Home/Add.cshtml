@@ -1,0 +1,19 @@
+﻿@model PostNews
+
+    <from asp-action="Add" asp-controller="Home" method="post">
+        <div class="container">
+            <header class="header">
+                <h1 class="head">Add New News</h1>
+                <a href="/Home/Index"> <button class="back">Back</button> </a>
+            </header>
+            <main class="main">
+                <label for="name">Name:</label>
+                <input asp-for="Title" type ="text" id="name" placeholder="Name">
+                <label for="coment">Detail:</label>
+                <textarea asp-for="Description" id="coment" placeholder='Detail'></textarea>
+                <label for="img">Image:</label>
+                <input asp-for="Image" type="file" multiple class="file">
+                <button type="submit" class="submit">Submit</button>
+            </main>
+        </div>
+    </from>
